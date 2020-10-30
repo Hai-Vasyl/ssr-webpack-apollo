@@ -1,0 +1,39 @@
+$main: lightgrey;
+$dark: #333;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 1.05em;
+}
+
+.nav {
+  border-bottom: 1px solid $main;
+  &__menu {
+    width: 1200px;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+  }
+}
+
+.link {
+  border: 1px solid transparent;
+  border-bottom-color: $main;
+  transform: translateY(1px);
+  transition: 0.3s ease;
+  text-decoration: none;
+  padding: 12px 30px;
+  color: $dark;
+  &--active {
+    border-bottom-color: transparent;
+    border-left-color: $main;
+    border-right-color: $main;
+  }
+}
